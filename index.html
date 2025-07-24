@@ -1,0 +1,905 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2487">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Calibri; color: #000000; -webkit-text-stroke: #000000}
+    span.s1 {font-kerning: none}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
+<p class="p1"><span class="s1">&lt;html lang="de"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;head&gt;</span></p>
+<p class="p1"><span class="s1">    &lt;meta charset="UTF-8"&gt;</span></p>
+<p class="p1"><span class="s1">    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span></p>
+<p class="p1"><span class="s1">    &lt;title&gt;Personal Training mit Lukas Jaskolka&lt;/title&gt;</span></p>
+<p class="p1"><span class="s1">    &lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</span></p>
+<p class="p1"><span class="s1">    &lt;link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"&gt;</span></p>
+<p class="p1"><span class="s1">    &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"&gt;</span></p>
+<p class="p1"><span class="s1">    &lt;style&gt;</span></p>
+<p class="p1"><span class="s1">        body {</span></p>
+<p class="p1"><span class="s1">            font-family: 'Montserrat', sans-serif;</span></p>
+<p class="p1"><span class="s1">            scroll-behavior: smooth;</span></p>
+<p class="p1"><span class="s1">        }</span></p>
+<p class="p1"><span class="s1">        .hero-section {</span></p>
+<p class="p1"><span class="s1">            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://i.postimg.cc/Gh78qKZm/20181028-Flens-Fitness-Studio-0925-Kopie.jpg');</span></p>
+<p class="p1"><span class="s1">            background-size: cover;</span></p>
+<p class="p1"><span class="s1">            background-position: center;</span></p>
+<p class="p1"><span class="s1">        }</span></p>
+<p class="p1"><span class="s1">        .testimonial-card {</span></p>
+<p class="p1"><span class="s1">            transition: transform 0.3s ease;</span></p>
+<p class="p1"><span class="s1">        }</span></p>
+<p class="p1"><span class="s1">        .testimonial-card:hover {</span></p>
+<p class="p1"><span class="s1">            transform: translateY(-5px);</span></p>
+<p class="p1"><span class="s1">        }</span></p>
+<p class="p1"><span class="s1">        .service-card {</span></p>
+<p class="p1"><span class="s1">            transition: transform 0.3s ease, box-shadow 0.3s ease;</span></p>
+<p class="p1"><span class="s1">        }</span></p>
+<p class="p1"><span class="s1">        .service-card:hover {</span></p>
+<p class="p1"><span class="s1">            transform: translateY(-5px);</span></p>
+<p class="p1"><span class="s1">            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);</span></p>
+<p class="p1"><span class="s1">        }</span></p>
+<p class="p1"><span class="s1">        .chat-popup {</span></p>
+<p class="p1"><span class="s1">            display: none;</span></p>
+<p class="p1"><span class="s1">            position: fixed;</span></p>
+<p class="p1"><span class="s1">            bottom: 80px;</span></p>
+<p class="p1"><span class="s1">            right: 15px;</span></p>
+<p class="p1"><span class="s1">            z-index: 50;</span></p>
+<p class="p1"><span class="s1">        }</span></p>
+<p class="p1"><span class="s1">        .social-icon {</span></p>
+<p class="p1"><span class="s1">            transition: all 0.3s ease;</span></p>
+<p class="p1"><span class="s1">        }</span></p>
+<p class="p1"><span class="s1">        .social-icon:hover {</span></p>
+<p class="p1"><span class="s1">            transform: translateY(-3px);</span></p>
+<p class="p1"><span class="s1">            color: #22c55e;</span></p>
+<p class="p1"><span class="s1">        }</span></p>
+<p class="p1"><span class="s1">        .partner-logo {</span></p>
+<p class="p1"><span class="s1">            transition: all 0.3s ease;</span></p>
+<p class="p1"><span class="s1">            filter: grayscale(100%);</span></p>
+<p class="p1"><span class="s1">        }</span></p>
+<p class="p1"><span class="s1">        .partner-logo:hover {</span></p>
+<p class="p1"><span class="s1">            filter: grayscale(0%);</span></p>
+<p class="p1"><span class="s1">            transform: scale(1.05);</span></p>
+<p class="p1"><span class="s1">        }</span></p>
+<p class="p1"><span class="s1">        .service-img {</span></p>
+<p class="p1"><span class="s1">            height: 250px;</span></p>
+<p class="p1"><span class="s1">            object-fit: cover;</span></p>
+<p class="p1"><span class="s1">            width: 100%;</span></p>
+<p class="p1"><span class="s1">        }</span></p>
+<p class="p1"><span class="s1">    &lt;/style&gt;</span></p>
+<p class="p1"><span class="s1">    &lt;script&gt;</span></p>
+<p class="p1"><span class="s1">        tailwind.config = {</span></p>
+<p class="p1"><span class="s1">            theme: {</span></p>
+<p class="p1"><span class="s1">                extend: {</span></p>
+<p class="p1"><span class="s1">                    colors: {</span></p>
+<p class="p1"><span class="s1">                        primary: {</span></p>
+<p class="p1"><span class="s1">                            50: '#f0fdf4',</span></p>
+<p class="p1"><span class="s1">                            100: '#dcfce7',</span></p>
+<p class="p1"><span class="s1">                            200: '#bbf7d0',</span></p>
+<p class="p1"><span class="s1">                            300: '#86efac',</span></p>
+<p class="p1"><span class="s1">                            400: '#4ade80',</span></p>
+<p class="p1"><span class="s1">                            500: '#22c55e',</span></p>
+<p class="p1"><span class="s1">                            600: '#16a34a',</span></p>
+<p class="p1"><span class="s1">                            700: '#15803d',</span></p>
+<p class="p1"><span class="s1">                            800: '#166534',</span></p>
+<p class="p1"><span class="s1">                            900: '#14532d',</span></p>
+<p class="p1"><span class="s1">                        }</span></p>
+<p class="p1"><span class="s1">                    }</span></p>
+<p class="p1"><span class="s1">                }</span></p>
+<p class="p1"><span class="s1">            }</span></p>
+<p class="p1"><span class="s1">        }</span></p>
+<p class="p1"><span class="s1">    &lt;/script&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
+<p class="p1"><span class="s1">&lt;body class="bg-gray-50"&gt;</span></p>
+<p class="p1"><span class="s1">    &lt;!-- Navigation --&gt;</span></p>
+<p class="p1"><span class="s1">    &lt;nav class="bg-black shadow-md fixed w-full z-50"&gt;</span></p>
+<p class="p1"><span class="s1">        &lt;div class="container mx-auto px-4 py-3 flex justify-between items-center"&gt;</span></p>
+<p class="p1"><span class="s1">            &lt;div class="flex items-center"&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;a href="#" class="text-2xl font-bold text-primary-500 mr-6"&gt;PT Lukas&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;div class="hidden md:flex space-x-3"&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;a href="https://www.instagram.com/lukasjaskolka" target="_blank" class="text-gray-300 hover:text-primary-400 social-icon"&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;i class="fab fa-instagram"&gt;&lt;/i&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;a href="https://www.youtube.com/c/lukasjaskolka" target="_blank" class="text-gray-300 hover:text-primary-400 social-icon"&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;i class="fab fa-youtube"&gt;&lt;/i&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">            &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">            &lt;div class="hidden md:flex space-x-8"&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;a href="#about" class="text-gray-300 hover:text-primary-400 transition"&gt;Über mich&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;a href="#certificates" class="text-gray-300 hover:text-primary-400 transition"&gt;Zertifikate&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;a href="#partners" class="text-gray-300 hover:text-primary-400 transition"&gt;Partner&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;a href="#services" class="text-gray-300 hover:text-primary-400 transition"&gt;Angebote&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;a href="#testimonials" class="text-gray-300 hover:text-primary-400 transition"&gt;Erfolgsgeschichten&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;a href="#contact" class="text-gray-300 hover:text-primary-400 transition"&gt;Kontakt&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">            &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">            &lt;button class="md:hidden text-gray-300" id="mobile-menu-button"&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"&gt;&lt;/path&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;/svg&gt;</span></p>
+<p class="p1"><span class="s1">            &lt;/button&gt;</span></p>
+<p class="p1"><span class="s1">        &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">        &lt;!-- Mobile Menu --&gt;</span></p>
+<p class="p1"><span class="s1">        &lt;div class="md:hidden hidden bg-black w-full" id="mobile-menu"&gt;</span></p>
+<p class="p1"><span class="s1">            &lt;div class="container mx-auto px-4 py-3 flex flex-col space-y-3"&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;div class="flex space-x-4 py-2"&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;a href="https://www.instagram.com/lukasjaskolka" target="_blank" class="text-gray-300 hover:text-primary-400 social-icon"&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;i class="fab fa-instagram"&gt;&lt;/i&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;a href="https://www.youtube.com/c/lukasjaskolka" target="_blank" class="text-gray-300 hover:text-primary-400 social-icon"&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;i class="fab fa-youtube"&gt;&lt;/i&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;a href="#about" class="text-gray-300 hover:text-primary-400 transition"&gt;Über mich&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;a href="#certificates" class="text-gray-300 hover:text-primary-400 transition"&gt;Zertifikate&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;a href="#partners" class="text-gray-300 hover:text-primary-400 transition"&gt;Partner&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;a href="#services" class="text-gray-300 hover:text-primary-400 transition"&gt;Angebote&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;a href="#testimonials" class="text-gray-300 hover:text-primary-400 transition"&gt;Erfolgsgeschichten&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;a href="#contact" class="text-gray-300 hover:text-primary-400 transition"&gt;Kontakt&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">            &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">        &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">    &lt;/nav&gt;</span></p>
+<p class="p1"><span class="s1"> </span></p>
+<p class="p1"><span class="s1">    &lt;!-- Hero Section --&gt;</span></p>
+<p class="p1"><span class="s1">    &lt;section class="hero-section h-screen flex items-center justify-center text-white pt-16"&gt;</span></p>
+<p class="p1"><span class="s1">        &lt;div class="container mx-auto px-4 text-center"&gt;</span></p>
+<p class="p1"><span class="s1">            &lt;h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6"&gt;Personal Training mit Lukas Jaskolka&lt;/h1&gt;</span></p>
+<p class="p1"><span class="s1">            &lt;p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto"&gt;Erreiche deine Fitnessziele mit professionellem Personal Training in Neumünster und Umgebung&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">            &lt;div class="flex flex-col md:flex-row justify-center gap-4"&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;a href="#contact" class="bg-primary-600 hover:bg-primary-700 text-white font-semibold py-3 px-8 rounded-lg transition duration-300 text-lg"&gt;Kontakt aufnehmen&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;a href="#services" class="bg-transparent border-2 border-white hover:bg-white hover:text-primary-600 text-white font-semibold py-3 px-8 rounded-lg transition duration-300 text-lg"&gt;Meine Angebote&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">            &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">        &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">    &lt;/section&gt;</span></p>
+<p class="p1"><span class="s1"> </span></p>
+<p class="p1"><span class="s1">    &lt;!-- About Section --&gt;</span></p>
+<p class="p1"><span class="s1">    &lt;section id="about" class="py-20 bg-white"&gt;</span></p>
+<p class="p1"><span class="s1">        &lt;div class="container mx-auto px-4"&gt;</span></p>
+<p class="p1"><span class="s1">            &lt;div class="flex flex-col md:flex-row items-center gap-12"&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;div class="md:w-1/2"&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;img src="https://i.postimg.cc/sD23y7C6/20181028-Flens-Fitness-Studio-1053.jpg" alt="Lukas Jaskolka Personal Trainer" class="rounded-lg shadow-lg w-full h-auto"&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;div class="md:w-1/2"&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;h2 class="text-3xl font-bold mb-6 text-gray-800"&gt;Über mich&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;p class="text-gray-600 mb-4"&gt;Ich bin Lukas Jaskolka – Personal Trainer aus Leidenschaft, seit 2014. Wenn du Ergebnisse willst, bist du hier richtig. Abnehmen, Muskeln aufbauen, Schmerzen loswerden, fitter werden, dich einfach gut fühlen – genau dafür bin ich da.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;p class="text-gray-600 mb-4"&gt;Ich habe Sport, Ernährung und Gesundheit studiert (Bachelor &amp; Master), bin Lehrer und DOSB-lizenzierter Trainer im olympischen Gewichtheben. Zusätzlich besitze ich die A- und B-Lizenz in Training und Ernährung. In meinen Personal Trainings und Kursen arbeite ich mit Menschen aller Altersgruppen – individuell, praxisnah und zielorientiert.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;p class="text-gray-600 mb-4"&gt;Was mich auszeichnet: fundiertes Fachwissen, ehrliches Interesse und der Blick fürs Detail. Ich entwickle keine Standardpläne, sondern passgenaue Strategien, die wirklich funktionieren – körperlich, mental und langfristig. Und ich bleibe an deiner Seite, bis du dein Ziel erreicht hast.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;p class="text-gray-600 mb-8"&gt;Neben meiner Arbeit als Trainer bin ich selbst aktiv, bilde mich ständig weiter und weiß, wie wichtig Leidenschaft und Disziplin für nachhaltigen Erfolg sind. Für mich geht es nicht nur um Training, sondern darum, Menschen dabei zu unterstützen, sich rundum wohlzufühlen – in ihrem Körper und in ihrem Leben.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">                   <span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">                    &lt;div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8"&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;div class="bg-primary-50 p-4 rounded-lg text-center"&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;svg class="w-10 h-10 mx-auto mb-2 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"&gt;&lt;/path&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;/svg&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;p class="text-gray-700 font-medium"&gt;Zertifizierter Trainer&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;div class="bg-primary-50 p-4 rounded-lg text-center"&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;svg class="w-10 h-10 mx-auto mb-2 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"&gt;&lt;/path&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;/svg&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;p class="text-gray-700 font-medium"&gt;Individuelle Betreuung&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;div class="bg-primary-50 p-4 rounded-lg text-center"&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;svg class="w-10 h-10 mx-auto mb-2 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"&gt;&lt;/path&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;/svg&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;p class="text-gray-700 font-medium"&gt;Flexible Trainingszeiten&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;div class="bg-primary-50 p-4 rounded-lg text-center"&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;svg class="w-10 h-10 mx-auto mb-2 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"&gt;&lt;/path&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;/svg&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;p class="text-gray-700 font-medium"&gt;Trainingsplanung&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                   <span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">                    &lt;a href="#contact" class="inline-block bg-primary-600 hover:bg-primary-700 text-white font-semibold py-3 px-8 rounded-lg transition duration-300"&gt;Kontaktiere mich&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">            &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">        &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">    &lt;/section&gt;</span></p>
+<p class="p1"><span class="s1"> </span></p>
+<p class="p1"><span class="s1">    &lt;!-- Certificates Section --&gt;</span></p>
+<p class="p1"><span class="s1">    &lt;section id="certificates" class="py-20 bg-gray-50"&gt;</span></p>
+<p class="p1"><span class="s1">        &lt;div class="container mx-auto px-4"&gt;</span></p>
+<p class="p1"><span class="s1">            &lt;h2 class="text-3xl font-bold mb-2 text-center text-gray-800"&gt;Meine Zertifikate&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1">            &lt;p class="text-gray-600 text-center mb-12 max-w-3xl mx-auto"&gt;Meine Qualifikationen und Zertifizierungen, die meine Expertise als Personal Trainer belegen.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">           <span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">            &lt;div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;div class="bg-white p-6 rounded-lg shadow-md"&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;div class="h-16 w-16 bg-primary-100 rounded-full flex items-center justify-center mb-4"&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"&gt;&lt;/path&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0v10"&gt;&lt;/path&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;/svg&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;h3 class="text-xl font-semibold mb-2 text-gray-800"&gt;Bachelor &amp; Master in Sport und Ernährung&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;p class="text-gray-600 mb-4"&gt;Akademische Ausbildung mit Schwerpunkt auf Sportwissenschaft und Ernährungslehre an der Europa Universität Flensburg.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;p class="text-gray-500 text-sm"&gt;Bachelor: 2019 | Master: 2021&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">               <span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">                &lt;div class="bg-white p-6 rounded-lg shadow-md"&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;div class="h-16 w-16 bg-primary-100 rounded-full flex items-center justify-center mb-4"&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"&gt;&lt;/path&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;/svg&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;h3 class="text-xl font-semibold mb-2 text-gray-800"&gt;Fitnesstrainer A- &amp; B-Lizenz&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;p class="text-gray-600 mb-4"&gt;Umfassende Ausbildung zum Fitnesstrainer durch die BSA-Akademie mit Spezialisierung auf individuelles Training und Trainingsplanung.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;p class="text-gray-500 text-sm"&gt;B-Lizenz: 2014 | A-Lizenz: 2015&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">               <span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">                &lt;div class="bg-white p-6 rounded-lg shadow-md"&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;div class="h-16 w-16 bg-primary-100 rounded-full flex items-center justify-center mb-4"&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"&gt;&lt;/path&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;/svg&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;h3 class="text-xl font-semibold mb-2 text-gray-800"&gt;Ernährungs-Coach A-Lizenz&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;p class="text-gray-600 mb-4"&gt;Spezialisierung auf sportgerechte Ernährung und Ernährungspläne durch SAFS &amp; BETA mit Fokus auf ernährungsbedingte Krankheitsbilder und Prävention.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;p class="text-gray-500 text-sm"&gt;Erworben: Oktober 2017&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">               <span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">                &lt;div class="bg-white p-6 rounded-lg shadow-md"&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;div class="h-16 w-16 bg-primary-100 rounded-full flex items-center justify-center mb-4"&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"&gt;&lt;/path&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;/svg&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;h3 class="text-xl font-semibold mb-2 text-gray-800"&gt;C-Lizenz Olympischer Zweikampf&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;p class="text-gray-600 mb-4"&gt;DOSB-lizenzierter Trainer im olympischen Gewichtheben mit Spezialisierung auf korrekte Technik und Trainingsmethodik.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;p class="text-gray-500 text-sm"&gt;Erworben: 2025&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">            &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">        &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">    &lt;/section&gt;</span></p>
+<p class="p1"><span class="s1"> </span></p>
+<p class="p1"><span class="s1">    &lt;!-- Partners Section --&gt;</span></p>
+<p class="p1"><span class="s1">    &lt;section id="partners" class="py-20 bg-white"&gt;</span></p>
+<p class="p1"><span class="s1">        &lt;div class="container mx-auto px-4"&gt;</span></p>
+<p class="p1"><span class="s1">            &lt;h2 class="text-3xl font-bold mb-2 text-center text-gray-800"&gt;Meine Partner&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1">            &lt;p class="text-gray-600 text-center mb-12 max-w-3xl mx-auto"&gt;Ich arbeite mit erstklassigen Partnern zusammen, um dir das beste Trainingserlebnis zu bieten.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">           <span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">            &lt;div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto"&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;div class="flex flex-col items-center"&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;a href="https://www.bodyundsoul.com/" target="_blank" class="mb-6"&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;img src="https://www.bodyundsoul.com/d3d3eac5/settings-images/4NBFKAQ0RZazt5Z1F8BhvQ/Logo-neu-mit-Ls_300.png" alt="Body &amp; Soul Logo" class="h-32 partner-logo"&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;h3 class="text-xl font-semibold mb-3 text-gray-800"&gt;Body &amp; Soul&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;p class="text-gray-600 text-center"&gt;Premium Fitnessstudio in Neumünster mit modernsten Geräten und professioneller Atmosphäre für effektives Training.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">               <span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">                &lt;div class="flex flex-col items-center"&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;a href="https://scgutheil.de/" target="_blank" class="mb-6"&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;img src="https://scgutheil.de/wp-content/uploads/2021/07/logofinalende_transparent.png" alt="245 Athletik Logo" class="h-32 partner-logo"&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;h3 class="text-xl font-semibold mb-3 text-gray-800"&gt;245 Athletik&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;p class="text-gray-600 text-center"&gt;Spezialisiertes Athletiktraining für Sportler aller Leistungsklassen mit Fokus auf funktionelle Bewegungen und Leistungssteigerung.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">            &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">           <span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">            &lt;div class="mt-16 text-center"&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;p class="text-gray-600 mb-6"&gt;Interessiert an einer Zusammenarbeit oder Partnerschaft?&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;a href="#contact" class="inline-block bg-primary-600 hover:bg-primary-700 text-white font-semibold py-3 px-8 rounded-lg transition duration-300"&gt;Kontaktiere mich&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">            &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">        &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">    &lt;/section&gt;</span></p>
+<p class="p1"><span class="s1"> </span></p>
+<p class="p1"><span class="s1">    &lt;!-- Services Section --&gt;</span></p>
+<p class="p1"><span class="s1">    &lt;section id="services" class="py-20 bg-gray-50"&gt;</span></p>
+<p class="p1"><span class="s1">        &lt;div class="container mx-auto px-4"&gt;</span></p>
+<p class="p1"><span class="s1">            &lt;h2 class="text-3xl font-bold mb-2 text-center text-gray-800"&gt;Meine Angebote&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1">            &lt;p class="text-gray-600 text-center mb-12 max-w-3xl mx-auto"&gt;Entdecke meine maßgeschneiderten Trainingsangebote, die auf deine individuellen Bedürfnisse und Ziele abgestimmt sind.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">           <span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">            &lt;div class="grid grid-cols-1 md:grid-cols-3 gap-8"&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;div class="service-card bg-white border border-gray-200 rounded-lg overflow-hidden"&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;img src="https://i.postimg.cc/7ZqV63Nz/20181028-Flens-Fitness-Studio-0802-Kopie-3.jpg" alt="Einzeltraining" class="service-img"&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;div class="p-6"&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;h3 class="text-xl font-semibold mb-3 text-gray-800"&gt;Einzeltraining&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;p class="text-gray-600 mb-6"&gt;Individuelles Training, das speziell auf deine Ziele und Bedürfnisse zugeschnitten ist. Maximale Aufmerksamkeit und Betreuung für optimale Ergebnisse.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;ul class="mb-6 space-y-2"&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;li class="flex items-center text-gray-600"&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;svg class="w-5 h-5 mr-2 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;</span></p>
+<p class="p1"><span class="s1">                                    &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"&gt;&lt;/path&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;/svg&gt;</span></p>
+<p class="p1"><span class="s1">                                Persönliche Betreuung</span></p>
+<p class="p1"><span class="s1">                            &lt;/li&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;li class="flex items-center text-gray-600"&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;svg class="w-5 h-5 mr-2 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;</span></p>
+<p class="p1"><span class="s1">                                    &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"&gt;&lt;/path&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;/svg&gt;</span></p>
+<p class="p1"><span class="s1">                                Maßgeschneiderter Trainingsplan</span></p>
+<p class="p1"><span class="s1">                            &lt;/li&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;li class="flex items-center text-gray-600"&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;svg class="w-5 h-5 mr-2 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;</span></p>
+<p class="p1"><span class="s1">                                    &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"&gt;&lt;/path&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;/svg&gt;</span></p>
+<p class="p1"><span class="s1">                                Flexible Terminvereinbarung</span></p>
+<p class="p1"><span class="s1">                            &lt;/li&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;/ul&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;a href="#contact" class="inline-block bg-primary-600 hover:bg-primary-700 text-white font-semibold py-2 px-6 rounded-lg transition duration-300 w-full text-center"&gt;Mehr erfahren&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">               <span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">                &lt;div class="service-card bg-white border border-gray-200 rounded-lg overflow-hidden"&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;img src="https://media.istockphoto.com/id/1145611494/photo/people-exercising-in-a-gym-with-medicine-balls.jpg?s=612x612&amp;w=0&amp;k=20&amp;c=zOtPhSAVCW9LCzmbsfI0gIphQ0196tpywsvOjozeM_c=" alt="Partner-Training" class="service-img"&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;div class="p-6"&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;h3 class="text-xl font-semibold mb-3 text-gray-800"&gt;Partner- &amp; Gruppentraining&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;p class="text-gray-600 mb-6"&gt;Trainiere gemeinsam mit Freunden oder Kollegen in kleinen Gruppen von 2-4 Personen. Motiviert euch gegenseitig und teilt euch die Kosten für das Training.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;ul class="mb-6 space-y-2"&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;li class="flex items-center text-gray-600"&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;svg class="w-5 h-5 mr-2 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;</span></p>
+<p class="p1"><span class="s1">                                    &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"&gt;&lt;/path&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;/svg&gt;</span></p>
+<p class="p1"><span class="s1">                                Gemeinsame Motivation</span></p>
+<p class="p1"><span class="s1">                            &lt;/li&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;li class="flex items-center text-gray-600"&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;svg class="w-5 h-5 mr-2 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;</span></p>
+<p class="p1"><span class="s1">                                    &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"&gt;&lt;/path&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;/svg&gt;</span></p>
+<p class="p1"><span class="s1">                                Kosteneffizient für 2-4 Personen</span></p>
+<p class="p1"><span class="s1">                            &lt;/li&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;li class="flex items-center text-gray-600"&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;svg class="w-5 h-5 mr-2 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;</span></p>
+<p class="p1"><span class="s1">                                    &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"&gt;&lt;/path&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;/svg&gt;</span></p>
+<p class="p1"><span class="s1">                                Angepasste Übungen für alle</span></p>
+<p class="p1"><span class="s1">                            &lt;/li&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;/ul&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;a href="#contact" class="inline-block bg-primary-600 hover:bg-primary-700 text-white font-semibold py-2 px-6 rounded-lg transition duration-300 w-full text-center"&gt;Mehr erfahren&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">               <span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">                &lt;div class="service-card bg-white border border-gray-200 rounded-lg overflow-hidden"&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;img src="https://media.istockphoto.com/id/928088390/de/foto/menschliche-hand-erstellung-trainingsplan.jpg?s=612x612&amp;w=0&amp;k=20&amp;c=_a4N3cBspD31N9l9al_Dbaz5i3qWke-Je3HpX3zZwZs=" alt="Trainingsplanung" class="service-img"&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;div class="p-6"&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;h3 class="text-xl font-semibold mb-3 text-gray-800"&gt;Trainingsplanung&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;p class="text-gray-600 mb-6"&gt;Optimiere dein Training mit einem personalisierten Trainingsplan, der zu deinen Zielen passt.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;ul class="mb-6 space-y-2"&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;li class="flex items-center text-gray-600"&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;svg class="w-5 h-5 mr-2 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;</span></p>
+<p class="p1"><span class="s1">                                    &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"&gt;&lt;/path&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;/svg&gt;</span></p>
+<p class="p1"><span class="s1">                                Individueller Trainingsplan</span></p>
+<p class="p1"><span class="s1">                            &lt;/li&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;li class="flex items-center text-gray-600"&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;svg class="w-5 h-5 mr-2 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;</span></p>
+<p class="p1"><span class="s1">                                    &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"&gt;&lt;/path&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;/svg&gt;</span></p>
+<p class="p1"><span class="s1">                                Übungsvorschläge</span></p>
+<p class="p1"><span class="s1">                            &lt;/li&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;li class="flex items-center text-gray-600"&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;svg class="w-5 h-5 mr-2 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;</span></p>
+<p class="p1"><span class="s1">                                    &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"&gt;&lt;/path&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;/svg&gt;</span></p>
+<p class="p1"><span class="s1">                                Regelmäßige Anpassungen</span></p>
+<p class="p1"><span class="s1">                            &lt;/li&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;/ul&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;a href="#contact" class="inline-block bg-primary-600 hover:bg-primary-700 text-white font-semibold py-2 px-6 rounded-lg transition duration-300 w-full text-center"&gt;Mehr erfahren&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">            &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">        &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">    &lt;/section&gt;</span></p>
+<p class="p1"><span class="s1"> </span></p>
+<p class="p1"><span class="s1">    &lt;!-- Testimonials Section --&gt;</span></p>
+<p class="p1"><span class="s1">    &lt;section id="testimonials" class="py-20 bg-white"&gt;</span></p>
+<p class="p1"><span class="s1">        &lt;div class="container mx-auto px-4"&gt;</span></p>
+<p class="p1"><span class="s1">            &lt;h2 class="text-3xl font-bold mb-2 text-center text-gray-800"&gt;Erfolgsgeschichten&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1">            &lt;p class="text-gray-600 text-center mb-12 max-w-3xl mx-auto"&gt;Was meine Kunden über ihre Erfahrungen und Erfolge mit meinem Personal Training sagen.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">           <span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">            &lt;div class="grid grid-cols-1 md:grid-cols-3 gap-8"&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;div class="testimonial-card bg-white p-6 rounded-lg shadow-md"&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;div class="flex items-center mb-4"&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;img src="https://i.postimg.cc/3JcjFsjK/katta.png" alt="Katharina A." class="h-12 w-12 rounded-full object-cover"&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;div class="ml-4"&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;h4 class="font-semibold text-gray-800"&gt;Katharina A.&lt;/h4&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;p class="text-gray-500 text-sm"&gt;Flensburg&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;div class="mb-4"&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;div class="flex text-yellow-400"&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"&gt;&lt;/path&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;/svg&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"&gt;&lt;/path&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;/svg&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"&gt;&lt;/path&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;/svg&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"&gt;&lt;/path&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;/svg&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"&gt;&lt;/path&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;/svg&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;p class="text-gray-600 italic"&gt;"Lukas ist ein Unikat! Ich habe nie so viel Spaß am Sport gehabt wie mit und durch ihn. Der unverkennbare Mix aus Motivieren, Herausfordern, Pushen und Humor holt alles aus mir heraus ... jedes Mal wieder ... Woche für Woche ...seit über 3 Jahren. Mittlerweile mehr als nur mein Trainer, ein guter Kumpel dazu, danke ich dir für die äußerst produktive und schweißtreibende Zeit in den letzten Jahren."&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">               <span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">                &lt;div class="testimonial-card bg-white p-6 rounded-lg shadow-md"&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;div class="flex items-center mb-4"&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;img src="https://i.postimg.cc/J7TjRf2b/mischi.png" alt="Michael G." class="h-12 w-12 rounded-full object-cover"&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;div class="ml-4"&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;h4 class="font-semibold text-gray-800"&gt;Michael G.&lt;/h4&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;p class="text-gray-500 text-sm"&gt;Hamburg&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;div class="mb-4"&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;div class="flex text-yellow-400"&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"&gt;&lt;/path&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;/svg&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"&gt;&lt;/path&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;/svg&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"&gt;&lt;/path&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;/svg&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"&gt;&lt;/path&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;/svg&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"&gt;&lt;/path&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;/svg&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;p class="text-gray-600 italic"&gt;"Da ich über viele Jahre neben Lukas die Ausbildung zum Fitness und Ernährungscoach begleitet habe, weiß ich wie umfangreich sein Know-How in diesem Bereich ist. Das weiterführende Studium verfeinert sein Wissen zusätzlich und ich kann beruhigt sagen, dass man nirgends besser aufgehoben ist als bei Lukas, wenn man sich coachen lassen will. Weiter so!"&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">               <span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">                &lt;div class="testimonial-card bg-white p-6 rounded-lg shadow-md"&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;div class="flex items-center mb-4"&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;div class="h-12 w-12 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-xl"&gt;T&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;div class="ml-4"&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;h4 class="font-semibold text-gray-800"&gt;Thomas B.&lt;/h4&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;p class="text-gray-500 text-sm"&gt;Neumünster&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;div class="mb-4"&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;div class="flex text-yellow-400"&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"&gt;&lt;/path&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;/svg&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"&gt;&lt;/path&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;/svg&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"&gt;&lt;/path&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;/svg&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"&gt;&lt;/path&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;/svg&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"&gt;&lt;/path&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;/svg&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;p class="text-gray-600 italic"&gt;"Ich hatte jahrelang Rückenschmerzen und nichts hat geholfen. Nach nur 2 Monaten Training mit Lukas sind meine Schmerzen fast komplett verschwunden. Seine Expertise in Bewegungsabläufen und Körperhaltung ist beeindruckend!"&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">            &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">           <span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">            &lt;div class="mt-12 text-center"&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;a href="#contact" class="inline-block bg-primary-600 hover:bg-primary-700 text-white font-semibold py-3 px-8 rounded-lg transition duration-300"&gt;Deine Erfolgsgeschichte beginnt hier&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">            &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">        &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">    &lt;/section&gt;</span></p>
+<p class="p1"><span class="s1"> </span></p>
+<p class="p1"><span class="s1">    &lt;!-- Social Media Section --&gt;</span></p>
+<p class="p1"><span class="s1">    &lt;section class="py-16 bg-gray-50"&gt;</span></p>
+<p class="p1"><span class="s1">        &lt;div class="container mx-auto px-4"&gt;</span></p>
+<p class="p1"><span class="s1">            &lt;h2 class="text-3xl font-bold mb-2 text-center text-gray-800"&gt;Folge mir&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1">            &lt;p class="text-gray-600 text-center mb-10 max-w-3xl mx-auto"&gt;Folge mir auf Social Media für tägliche Trainingstipps, Motivation und Einblicke in meine Arbeit als Personal Trainer.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">           <span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">            &lt;div class="flex justify-center gap-4 flex-wrap"&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;a href="https://www.instagram.com/lukasjaskolka" target="_blank" class="flex items-center bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 text-white px-6 py-3 rounded-lg hover:opacity-90 transition"&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;i class="fab fa-instagram text-xl mr-2"&gt;&lt;/i&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;span class="font-semibold"&gt;@lukasjaskolka folgen&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;a href="https://www.youtube.com/c/lukasjaskolka" target="_blank" class="flex items-center bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition"&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;i class="fab fa-youtube text-xl mr-2"&gt;&lt;/i&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;span class="font-semibold"&gt;YouTube Kanal&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">            &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">        &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">    &lt;/section&gt;</span></p>
+<p class="p1"><span class="s1"> </span></p>
+<p class="p1"><span class="s1">    &lt;!-- Fitness Questionnaire Section --&gt;</span></p>
+<p class="p1"><span class="s1">    &lt;section id="questionnaire" class="py-20 bg-white"&gt;</span></p>
+<p class="p1"><span class="s1">        &lt;div class="container mx-auto px-4"&gt;</span></p>
+<p class="p1"><span class="s1">            &lt;h2 class="text-3xl font-bold mb-2 text-center text-gray-800"&gt;Fitness-Fragebogen&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1">            &lt;p class="text-gray-600 text-center mb-12 max-w-3xl mx-auto"&gt;Fülle den Fragebogen aus, damit ich ein maßgeschneidertes Trainingsprogramm für dich erstellen kann.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">           <span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">            &lt;div class="bg-white p-8 rounded-lg shadow-md max-w-3xl mx-auto"&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;form id="fitness-form" class="space-y-6"&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;div&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;h3 class="text-xl font-semibold mb-4 text-gray-800"&gt;Persönliche Daten&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;div class="grid grid-cols-1 md:grid-cols-2 gap-4"&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;div&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;label for="name" class="block text-gray-700 mb-1"&gt;Name&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;div&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;label for="email" class="block text-gray-700 mb-1"&gt;E-Mail&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;div&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;label for="age" class="block text-gray-700 mb-1"&gt;Alter&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;input type="number" id="age" name="age" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;div&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;label for="gender" class="block text-gray-700 mb-1"&gt;Geschlecht&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;select id="gender" name="gender" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"&gt;</span></p>
+<p class="p1"><span class="s1">                                    &lt;option value=""&gt;Bitte wählen&lt;/option&gt;</span></p>
+<p class="p1"><span class="s1">                                    &lt;option value="male"&gt;Männlich&lt;/option&gt;</span></p>
+<p class="p1"><span class="s1">                                    &lt;option value="female"&gt;Weiblich&lt;/option&gt;</span></p>
+<p class="p1"><span class="s1">                                    &lt;option value="diverse"&gt;Divers&lt;/option&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;/select&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                   <span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">                    &lt;div&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;h3 class="text-xl font-semibold mb-4 text-gray-800"&gt;Biometrische Daten&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;div class="grid grid-cols-1 md:grid-cols-3 gap-4"&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;div&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;label for="height" class="block text-gray-700 mb-1"&gt;Größe (cm)&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;input type="number" id="height" name="height" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;div&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;label for="weight" class="block text-gray-700 mb-1"&gt;Gewicht (kg)&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;input type="number" id="weight" name="weight" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;div&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;label for="body-fat" class="block text-gray-700 mb-1"&gt;Körperfettanteil (falls bekannt)&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;input type="number" id="body-fat" name="body-fat" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                   <span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">                    &lt;div&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;h3 class="text-xl font-semibold mb-4 text-gray-800"&gt;Trainingserfahrung &amp; Ziele&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;div class="space-y-4"&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;div&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;label for="experience" class="block text-gray-700 mb-1"&gt;Trainingserfahrung&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;select id="experience" name="experience" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"&gt;</span></p>
+<p class="p1"><span class="s1">                                    &lt;option value=""&gt;Bitte wählen&lt;/option&gt;</span></p>
+<p class="p1"><span class="s1">                                    &lt;option value="beginner"&gt;Anfänger (0-6 Monate)&lt;/option&gt;</span></p>
+<p class="p1"><span class="s1">                                    &lt;option value="intermediate"&gt;Fortgeschritten (6 Monate - 2 Jahre)&lt;/option&gt;</span></p>
+<p class="p1"><span class="s1">                                    &lt;option value="advanced"&gt;Erfahren (2+ Jahre)&lt;/option&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;/select&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                           <span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">                            &lt;div&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;label class="block text-gray-700 mb-1"&gt;Trainingsziele (Mehrfachauswahl möglich)&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;div class="space-y-2"&gt;</span></p>
+<p class="p1"><span class="s1">                                    &lt;div class="flex items-center"&gt;</span></p>
+<p class="p1"><span class="s1">                                        &lt;input type="checkbox" id="goal-weight-loss" name="goals" value="weight-loss" class="h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded"&gt;</span></p>
+<p class="p1"><span class="s1">                                        &lt;label for="goal-weight-loss" class="ml-2 text-gray-700"&gt;Gewichtsabnahme&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1">                                    &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                                    &lt;div class="flex items-center"&gt;</span></p>
+<p class="p1"><span class="s1">                                        &lt;input type="checkbox" id="goal-muscle" name="goals" value="muscle" class="h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded"&gt;</span></p>
+<p class="p1"><span class="s1">                                        &lt;label for="goal-muscle" class="ml-2 text-gray-700"&gt;Muskelaufbau&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1">                                    &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                                    &lt;div class="flex items-center"&gt;</span></p>
+<p class="p1"><span class="s1">                                        &lt;input type="checkbox" id="goal-fitness" name="goals" value="fitness" class="h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded"&gt;</span></p>
+<p class="p1"><span class="s1">                                        &lt;label for="goal-fitness" class="ml-2 text-gray-700"&gt;Allgemeine Fitness verbessern&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1">                                    &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                                    &lt;div class="flex items-center"&gt;</span></p>
+<p class="p1"><span class="s1">                                        &lt;input type="checkbox" id="goal-health" name="goals" value="health" class="h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded"&gt;</span></p>
+<p class="p1"><span class="s1">                                        &lt;label for="goal-health" class="ml-2 text-gray-700"&gt;Gesundheit verbessern&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1">                                    &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                                    &lt;div class="flex items-center"&gt;</span></p>
+<p class="p1"><span class="s1">                                        &lt;input type="checkbox" id="goal-pain" name="goals" value="pain" class="h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded"&gt;</span></p>
+<p class="p1"><span class="s1">                                        &lt;label for="goal-pain" class="ml-2 text-gray-700"&gt;Schmerzreduktion&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1">                                    &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                           <span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">                            &lt;div&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;label for="message" class="block text-gray-700 mb-1"&gt;Weitere Informationen oder Fragen&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"&gt;&lt;/textarea&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                   <span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">                    &lt;div class="pt-4"&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;button type="submit" class="w-full bg-primary-600 hover:bg-primary-700 text-white font-semibold py-3 px-8 rounded-lg transition duration-300"&gt;Fragebogen absenden&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;/form&gt;</span></p>
+<p class="p1"><span class="s1">            &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">        &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">    &lt;/section&gt;</span></p>
+<p class="p1"><span class="s1"> </span></p>
+<p class="p1"><span class="s1">    &lt;!-- Contact Section --&gt;</span></p>
+<p class="p1"><span class="s1">    &lt;section id="contact" class="py-20 bg-black text-white"&gt;</span></p>
+<p class="p1"><span class="s1">        &lt;div class="container mx-auto px-4"&gt;</span></p>
+<p class="p1"><span class="s1">            &lt;h2 class="text-3xl font-bold mb-2 text-center"&gt;Kontaktiere mich&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1">            &lt;p class="text-center mb-12 max-w-3xl mx-auto"&gt;Bereit, deine Fitness auf das nächste Level zu bringen? Kontaktiere mich für ein kostenloses Erstgespräch.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">           <span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">            &lt;div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto"&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;div&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;h3 class="text-xl font-semibold mb-6"&gt;Kontaktinformationen&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;div class="space-y-4"&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;div class="flex items-start"&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;svg class="w-6 h-6 mr-3 mt-1 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"&gt;&lt;/path&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;/svg&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;div&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;p class="font-medium"&gt;E-Mail&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;p&gt;lukas.jaskolka@gmail.com&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                       <span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">                        &lt;div class="flex items-start"&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;svg class="w-6 h-6 mr-3 mt-1 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"&gt;&lt;/path&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"&gt;&lt;/path&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;/svg&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;div&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;p class="font-medium"&gt;Adresse&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;p&gt;Allerstraße 2&lt;br&gt;24539 Neumünster&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                       <span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">                        &lt;div class="pt-4"&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;p class="font-medium mb-2"&gt;Folge mir&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;div class="flex space-x-4"&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;a href="https://www.instagram.com/lukasjaskolka" target="_blank" class="bg-white text-black h-10 w-10 rounded-full flex items-center justify-center hover:bg-primary-100 transition"&gt;</span></p>
+<p class="p1"><span class="s1">                                    &lt;i class="fab fa-instagram"&gt;&lt;/i&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;a href="https://www.youtube.com/c/lukasjaskolka" target="_blank" class="bg-white text-black h-10 w-10 rounded-full flex items-center justify-center hover:bg-primary-100 transition"&gt;</span></p>
+<p class="p1"><span class="s1">                                    &lt;i class="fab fa-youtube"&gt;&lt;/i&gt;</span></p>
+<p class="p1"><span class="s1">                                &lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">               <span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">                &lt;div&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;h3 class="text-xl font-semibold mb-6"&gt;Schreib mir eine Nachricht&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;form id="contact-form" class="space-y-4"&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;div&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;label for="contact-name" class="block mb-1"&gt;Name&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;input type="text" id="contact-name" name="contact-name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 text-gray-800"&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;div&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;label for="contact-email" class="block mb-1"&gt;E-Mail&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;input type="email" id="contact-email" name="contact-email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 text-gray-800"&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;div&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;label for="contact-subject" class="block mb-1"&gt;Betreff&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;input type="text" id="contact-subject" name="contact-subject" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 text-gray-800"&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;div&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;label for="contact-message" class="block mb-1"&gt;Nachricht&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;textarea id="contact-message" name="contact-message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 text-gray-800"&gt;&lt;/textarea&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;button type="submit" class="w-full bg-primary-600 hover:bg-primary-700 text-white font-semibold py-3 px-8 rounded-lg transition duration-300"&gt;Nachricht senden&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;/form&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">            &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">        &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">    &lt;/section&gt;</span></p>
+<p class="p1"><span class="s1"> </span></p>
+<p class="p1"><span class="s1">    &lt;!-- Footer --&gt;</span></p>
+<p class="p1"><span class="s1">    &lt;footer class="bg-gray-900 text-white py-12"&gt;</span></p>
+<p class="p1"><span class="s1">        &lt;div class="container mx-auto px-4"&gt;</span></p>
+<p class="p1"><span class="s1">            &lt;div class="grid grid-cols-1 md:grid-cols-3 gap-8"&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;div&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;h3 class="text-xl font-semibold mb-4"&gt;PT Lukas&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;p class="text-gray-400 mb-4"&gt;Personal Trainer aus Leidenschaft. Spezialisiert auf individuelle Trainings- und Ernährungspläne für nachhaltige Ergebnisse.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;div class="flex space-x-4 mt-4"&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;a href="https://www.instagram.com/lukasjaskolka" target="_blank" class="text-gray-400 hover:text-primary-400 transition"&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;i class="fab fa-instagram"&gt;&lt;/i&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;a href="https://www.youtube.com/c/lukasjaskolka" target="_blank" class="text-gray-400 hover:text-primary-400 transition"&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;i class="fab fa-youtube"&gt;&lt;/i&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;div&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;h3 class="text-xl font-semibold mb-4"&gt;Schnelllinks&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;ul class="space-y-2"&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;li&gt;&lt;a href="#about" class="text-gray-400 hover:text-primary-400 transition"&gt;Über mich&lt;/a&gt;&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;li&gt;&lt;a href="#services" class="text-gray-400 hover:text-primary-400 transition"&gt;Angebote&lt;/a&gt;&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;li&gt;&lt;a href="#testimonials" class="text-gray-400 hover:text-primary-400 transition"&gt;Erfolgsgeschichten&lt;/a&gt;&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;li&gt;&lt;a href="#contact" class="text-gray-400 hover:text-primary-400 transition"&gt;Kontakt&lt;/a&gt;&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;/ul&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;div&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;h3 class="text-xl font-semibold mb-4"&gt;Rechtliches&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;ul class="space-y-2"&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;li&gt;&lt;a href="#" class="text-gray-400 hover:text-primary-400 transition"&gt;Impressum&lt;/a&gt;&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;li&gt;&lt;a href="#" class="text-gray-400 hover:text-primary-400 transition"&gt;Datenschutz&lt;/a&gt;&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;li&gt;&lt;a href="#" class="text-gray-400 hover:text-primary-400 transition"&gt;AGB&lt;/a&gt;&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;/ul&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">            &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">            &lt;div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400"&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;p&gt;&amp;copy; 2023 Lukas Jaskolka Personal Training. Alle Rechte vorbehalten.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">            &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">        &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">    &lt;/footer&gt;</span></p>
+<p class="p1"><span class="s1"> </span></p>
+<p class="p1"><span class="s1">    &lt;!-- Chat Button --&gt;</span></p>
+<p class="p1"><span class="s1">    &lt;button id="chat-button" class="fixed bottom-6 right-6 bg-primary-600 text-white rounded-full p-4 shadow-lg hover:bg-primary-700 transition z-50"&gt;</span></p>
+<p class="p1"><span class="s1">        &lt;svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;</span></p>
+<p class="p1"><span class="s1">            &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"&gt;&lt;/path&gt;</span></p>
+<p class="p1"><span class="s1">        &lt;/svg&gt;</span></p>
+<p class="p1"><span class="s1">    &lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"> </span></p>
+<p class="p1"><span class="s1">    &lt;!-- Chat Popup --&gt;</span></p>
+<p class="p1"><span class="s1">    &lt;div id="chat-popup" class="chat-popup bg-white rounded-lg shadow-xl w-80 md:w-96"&gt;</span></p>
+<p class="p1"><span class="s1">        &lt;div class="bg-primary-600 text-white p-4 rounded-t-lg flex justify-between items-center"&gt;</span></p>
+<p class="p1"><span class="s1">            &lt;h3 class="font-semibold"&gt;Chat mit Lukas&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1">            &lt;button id="close-chat" class="text-white hover:text-gray-200"&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"&gt;&lt;/path&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;/svg&gt;</span></p>
+<p class="p1"><span class="s1">            &lt;/button&gt;</span></p>
+<p class="p1"><span class="s1">        &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">        &lt;div id="chat-messages" class="p-4 h-80 overflow-y-auto bg-gray-50"&gt;</span></p>
+<p class="p1"><span class="s1">            &lt;div class="flex mb-4"&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;div class="h-8 w-8 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-sm mr-2"&gt;L&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;div class="bg-primary-100 rounded-lg p-3 max-w-[70%]"&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;p class="text-gray-800"&gt;Hallo! Wie kann ich dir heute helfen?&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">            &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">        &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">        &lt;div class="p-4 border-t"&gt;</span></p>
+<p class="p1"><span class="s1">            &lt;form id="chat-form" class="flex"&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;input type="text" id="chat-input" placeholder="Schreibe eine Nachricht..." class="flex-1 px-4 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-primary-500"&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;button type="submit" class="bg-primary-600 text-white px-4 py-2 rounded-r-md hover:bg-primary-700 transition"&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"&gt;&lt;/path&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;/svg&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;/button&gt;</span></p>
+<p class="p1"><span class="s1">            &lt;/form&gt;</span></p>
+<p class="p1"><span class="s1">        &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">    &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"> </span></p>
+<p class="p1"><span class="s1">    &lt;script&gt;</span></p>
+<p class="p1"><span class="s1">        // Mobile Menu Toggle</span></p>
+<p class="p1"><span class="s1">        const mobileMenuButton = document.getElementById('mobile-menu-button');</span></p>
+<p class="p1"><span class="s1">        const mobileMenu = document.getElementById('mobile-menu');</span></p>
+<p class="p1"><span class="s1">       <span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">        mobileMenuButton.addEventListener('click', () =&gt; {</span></p>
+<p class="p1"><span class="s1">            mobileMenu.classList.toggle('hidden');</span></p>
+<p class="p1"><span class="s1">        });</span></p>
+<p class="p1"><span class="s1">       <span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">        // Smooth Scrolling for Anchor Links</span></p>
+<p class="p1"><span class="s1">        document.querySelectorAll('a[href^="#"]').forEach(anchor =&gt; {</span></p>
+<p class="p1"><span class="s1">            anchor.addEventListener('click', function(e) {</span></p>
+<p class="p1"><span class="s1">                e.preventDefault();</span></p>
+<p class="p1"><span class="s1">               <span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">                const targetId = this.getAttribute('href');</span></p>
+<p class="p1"><span class="s1">                if (targetId === '#') return;</span></p>
+<p class="p1"><span class="s1">               <span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">                const targetElement = document.querySelector(targetId);</span></p>
+<p class="p1"><span class="s1">                if (targetElement) {</span></p>
+<p class="p1"><span class="s1">                    window.scrollTo({</span></p>
+<p class="p1"><span class="s1">                        top: targetElement.offsetTop - 80,</span></p>
+<p class="p1"><span class="s1">                        behavior: 'smooth'</span></p>
+<p class="p1"><span class="s1">                    });</span></p>
+<p class="p1"><span class="s1">                   <span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">                    // Close mobile menu if open</span></p>
+<p class="p1"><span class="s1">                    if (!mobileMenu.classList.contains('hidden')) {</span></p>
+<p class="p1"><span class="s1">                        mobileMenu.classList.add('hidden');</span></p>
+<p class="p1"><span class="s1">                    }</span></p>
+<p class="p1"><span class="s1">                }</span></p>
+<p class="p1"><span class="s1">            });</span></p>
+<p class="p1"><span class="s1">        });</span></p>
+<p class="p1"><span class="s1">       <span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">        // Form Submission Handlers</span></p>
+<p class="p1"><span class="s1">        const fitnessForm = document.getElementById('fitness-form');</span></p>
+<p class="p1"><span class="s1">        const contactForm = document.getElementById('contact-form');</span></p>
+<p class="p1"><span class="s1">       <span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">        if (fitnessForm) {</span></p>
+<p class="p1"><span class="s1">            fitnessForm.addEventListener('submit', function(e) {</span></p>
+<p class="p1"><span class="s1">                e.preventDefault();</span></p>
+<p class="p1"><span class="s1">               <span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">                // Sammle Formulardaten</span></p>
+<p class="p1"><span class="s1">                const formData = new FormData(fitnessForm);</span></p>
+<p class="p1"><span class="s1">                let emailBody = "Neuer Fitness-Fragebogen:\n\n";</span></p>
+<p class="p1"><span class="s1">               <span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">                for (let [key, value] of formData.entries()) {</span></p>
+<p class="p1"><span class="s1">                    if (key === "goals" &amp;&amp; Array.isArray(value)) {</span></p>
+<p class="p1"><span class="s1">                        emailBody += `${key}: ${value.join(", ")}\n`;</span></p>
+<p class="p1"><span class="s1">                    } else {</span></p>
+<p class="p1"><span class="s1">                        emailBody += `${key}: ${value}\n`;</span></p>
+<p class="p1"><span class="s1">                    }</span></p>
+<p class="p1"><span class="s1">                }</span></p>
+<p class="p1"><span class="s1">               <span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">                // Sende E-Mail (simuliert)</span></p>
+<p class="p1"><span class="s1">                console.log("E-Mail an lukas.jaskolka@gmail.com gesendet:", emailBody);</span></p>
+<p class="p1"><span class="s1">               <span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">                alert('Vielen Dank für das Ausfüllen des Fragebogens! Ich werde mich in Kürze bei dir melden.');</span></p>
+<p class="p1"><span class="s1">                fitnessForm.reset();</span></p>
+<p class="p1"><span class="s1">            });</span></p>
+<p class="p1"><span class="s1">        }</span></p>
+<p class="p1"><span class="s1">       <span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">        if (contactForm) {</span></p>
+<p class="p1"><span class="s1">            contactForm.addEventListener('submit', function(e) {</span></p>
+<p class="p1"><span class="s1">                e.preventDefault();</span></p>
+<p class="p1"><span class="s1">               <span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">                // Sammle Formulardaten</span></p>
+<p class="p1"><span class="s1">                const formData = new FormData(contactForm);</span></p>
+<p class="p1"><span class="s1">                let emailBody = "Neue Kontaktanfrage:\n\n";</span></p>
+<p class="p1"><span class="s1">               <span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">                for (let [key, value] of formData.entries()) {</span></p>
+<p class="p1"><span class="s1">                    emailBody += `${key}: ${value}\n`;</span></p>
+<p class="p1"><span class="s1">                }</span></p>
+<p class="p1"><span class="s1">               <span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">                // Sende E-Mail (simuliert)</span></p>
+<p class="p1"><span class="s1">                console.log("E-Mail an lukas.jaskolka@gmail.com gesendet:", emailBody);</span></p>
+<p class="p1"><span class="s1">               <span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">                alert('Vielen Dank für deine Nachricht! Ich werde mich so schnell wie möglich bei dir melden.');</span></p>
+<p class="p1"><span class="s1">                contactForm.reset();</span></p>
+<p class="p1"><span class="s1">            });</span></p>
+<p class="p1"><span class="s1">        }</span></p>
+<p class="p1"><span class="s1">       <span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">        // Chat Functionality</span></p>
+<p class="p1"><span class="s1">        const chatButton = document.getElementById('chat-button');</span></p>
+<p class="p1"><span class="s1">        const chatPopup = document.getElementById('chat-popup');</span></p>
+<p class="p1"><span class="s1">        const closeChat = document.getElementById('close-chat');</span></p>
+<p class="p1"><span class="s1">        const chatForm = document.getElementById('chat-form');</span></p>
+<p class="p1"><span class="s1">        const chatInput = document.getElementById('chat-input');</span></p>
+<p class="p1"><span class="s1">        const chatMessages = document.getElementById('chat-messages');</span></p>
+<p class="p1"><span class="s1">       <span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">        chatButton.addEventListener('click', () =&gt; {</span></p>
+<p class="p1"><span class="s1">            chatPopup.style.display = chatPopup.style.display === 'block' ? 'none' : 'block';</span></p>
+<p class="p1"><span class="s1">        });</span></p>
+<p class="p1"><span class="s1">       <span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">        closeChat.addEventListener('click', () =&gt; {</span></p>
+<p class="p1"><span class="s1">            chatPopup.style.display = 'none';</span></p>
+<p class="p1"><span class="s1">        });</span></p>
+<p class="p1"><span class="s1">       <span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">        chatForm.addEventListener('submit', (e) =&gt; {</span></p>
+<p class="p1"><span class="s1">            e.preventDefault();</span></p>
+<p class="p1"><span class="s1">           <span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">            const message = chatInput.value.trim();</span></p>
+<p class="p1"><span class="s1">            if (message === '') return;</span></p>
+<p class="p1"><span class="s1">           <span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">            // Füge Benutzernachricht hinzu</span></p>
+<p class="p1"><span class="s1">            chatMessages.innerHTML += `</span></p>
+<p class="p1"><span class="s1">                &lt;div class="flex justify-end mb-4"&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;div class="bg-primary-600 text-white rounded-lg p-3 max-w-[70%]"&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;p&gt;${message}&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">            `;</span></p>
+<p class="p1"><span class="s1">           <span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">            // Scrolle zum Ende der Nachrichten</span></p>
+<p class="p1"><span class="s1">            chatMessages.scrollTop = chatMessages.scrollHeight;</span></p>
+<p class="p1"><span class="s1">           <span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">            // Leere das Eingabefeld</span></p>
+<p class="p1"><span class="s1">            chatInput.value = '';</span></p>
+<p class="p1"><span class="s1">           <span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">            // Simuliere eine Antwort nach kurzer Verzögerung</span></p>
+<p class="p1"><span class="s1">            setTimeout(() =&gt; {</span></p>
+<p class="p1"><span class="s1">                chatMessages.innerHTML += `</span></p>
+<p class="p1"><span class="s1">                    &lt;div class="flex mb-4"&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;div class="h-8 w-8 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-sm mr-2"&gt;L&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;div class="bg-primary-100 rounded-lg p-3 max-w-[70%]"&gt;</span></p>
+<p class="p1"><span class="s1">                            &lt;p class="text-gray-800"&gt;Danke für deine Nachricht! Ich werde mich so schnell wie möglich bei dir melden. Wenn du ein persönliches Training buchen möchtest, fülle gerne den Fitness-Fragebogen aus oder kontaktiere mich direkt.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">                        &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                    &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">                `;</span></p>
+<p class="p1"><span class="s1">               <span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">                // Scrolle zum Ende der Nachrichten</span></p>
+<p class="p1"><span class="s1">                chatMessages.scrollTop = chatMessages.scrollHeight;</span></p>
+<p class="p1"><span class="s1">            }, 1000);</span></p>
+<p class="p1"><span class="s1">        });</span></p>
+<p class="p1"><span class="s1">    &lt;/script&gt;</span></p>
+<p class="p1"><span class="s1">&lt;script&gt;(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9641cd7ef513f5b8',t:'MTc1MzM0MzE3NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&amp;&amp;(document.onreadystatechange=e,c())}}}})();&lt;/script&gt;&lt;/body&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
+<p class="p1"><span class="s1"> </span></p>
+</body>
+</html>
